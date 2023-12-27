@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="content">
+    <div class="navigation">
+      <mat-nav-list class="top-menu-items">
+        <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/account" class="top-menu-item">
+          <mat-icon matListIcon>person</mat-icon>
+          <span routerLink="/account">Mi perfil</span>
+        </a>
+        <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/account/edit-profile" class="top-menu-item">
+          <mat-icon matListIcon>edit</mat-icon>
+          <span>Edit perfil</span>
+        </a>
+        <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/account/payment" class="top-menu-item">
+          <mat-icon matListIcon>credit_card</mat-icon>
+          <span>Mis pagos</span>
+        </a>
+        <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/account/courses" class="top-menu-item">
+          <mat-icon matListIcon>library_books</mat-icon>
+          <span>Mis cursos</span>
+        </a>
+        <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/courses" class="top-menu-item">
+          <mat-icon matListIcon>dashboard</mat-icon>
+          <span>Todos los cursos</span>
+        </a>
+      </mat-nav-list>
+      <div class="router">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+
