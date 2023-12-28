@@ -10,13 +10,25 @@
           <mat-icon matListIcon>edit</mat-icon>
           <span>Edit perfil</span>
         </a>
+        <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/account/courses" class="top-menu-item">
+          <mat-icon matListIcon>library_books</mat-icon>
+          <span>Mis cursos</span>
+        </a>
+        <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/account/credentials" class="top-menu-item">
+          <mat-icon matListIcon>stars</mat-icon>
+          <span>Credenciales</span>
+        </a>
         <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/account/payment" class="top-menu-item">
           <mat-icon matListIcon>credit_card</mat-icon>
           <span>Mis pagos</span>
         </a>
-        <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/account/courses" class="top-menu-item">
-          <mat-icon matListIcon>library_books</mat-icon>
-          <span>Mis cursos</span>
+        <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/account/subscriptions" class="top-menu-item">
+          <mat-icon matListIcon>credit_card</mat-icon>
+          <span>Subscripciones</span>
+        </a>
+        <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/account/support" class="top-menu-item">
+          <mat-icon matListIcon>contact_support</mat-icon>
+          <span>Soporte</span>
         </a>
         <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/courses" class="top-menu-item">
           <mat-icon matListIcon>dashboard</mat-icon>

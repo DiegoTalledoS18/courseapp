@@ -6,7 +6,16 @@
   <div class="menu-items-container">
     <mat-nav-list class="top-menu-items">
       <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/courses" class="top-menu-items">Cursos</a>
-      <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/specialization" class="top-menu-items">Especializaciones</a>
+      <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/routes" class="top-menu-items">Rutas</a>
+      <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/blogs" class="top-menu-items">Blog</a>
+      <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/teachers" class="top-menu-items">Docentes</a>
+      <a [routerLinkActive]="'top-active'" [routerLinkActiveOptions]="{exact: true}" routerLink="/events" class="top-menu-items">Eventos</a>
+    </mat-nav-list>
+    <mat-nav-list class="premium">
+      <a mat-list-item routerLink="/premium">
+        <mat-icon matListIcon style="color: gold">whatshot</mat-icon>
+        <span style="color: gold">Premium</span>
+      </a>
     </mat-nav-list>
     <div class="box">
       <input type="text" placeholder="Buscar..." [(ngModel)]="searchText">
@@ -18,7 +27,7 @@
       <div class="my-courses">
         <a mat-list-item routerLink="/account/courses">
           <mat-icon matListIcon>library_books</mat-icon>
-          <span>Mis cursos</span>
+          <span >Mis cursos</span>
         </a>
       </div>
       <a mat-list-item>
@@ -68,7 +77,15 @@
               <mat-icon matListIcon>library_books</mat-icon>
               <span >Mis cursos</span>
             </div>
-            <div class="profile-item">
+            <div class="profile-item" routerLink="/account/subscriptions">
+              <mat-icon matListIcon>credit_card</mat-icon>
+              <span >Mis subscripciones</span>
+            </div>
+            <div class="profile-item" routerLink="/account/credentials">
+              <mat-icon matListIcon>stars</mat-icon>
+              <span >Credenciales</span>
+            </div>
+            <div class="profile-item" routerLink="/">
               <mat-icon matListIcon>lock</mat-icon>
               <span>Cerrar sesion</span>
             </div>
@@ -100,8 +117,20 @@
           <span matlistitemtitle>Cursos</span>
         </a>
         <a [routerLinkActive]="'side-active'" [routerLinkActiveOptions]="{exact: true}"
-           mat-list-item (click)="sidenav.close()" routerLink="/specialization" class="side-menu-items">
-          <span matlistitemtitle>Especializaciones</span>
+           mat-list-item (click)="sidenav.close()" routerLink="/routes" class="side-menu-items">
+          <span matlistitemtitle>Rutas</span>
+        </a>
+        <a [routerLinkActive]="'side-active'" [routerLinkActiveOptions]="{exact: true}"
+           mat-list-item (click)="sidenav.close()" routerLink="/blogs" class="side-menu-items">
+          <span matlistitemtitle>Blog</span>
+        </a>
+        <a [routerLinkActive]="'side-active'" [routerLinkActiveOptions]="{exact: true}"
+           mat-list-item (click)="sidenav.close()" routerLink="/teachers" class="side-menu-items">
+          <span matlistitemtitle>Profesores</span>
+        </a>
+        <a [routerLinkActive]="'side-active'" [routerLinkActiveOptions]="{exact: true}"
+           mat-list-item (click)="sidenav.close()" routerLink="/events" class="side-menu-items">
+          <span matlistitemtitle>Eventos</span>
         </a>
       </mat-nav-list>
     </div>
@@ -126,6 +155,16 @@
              mat-list-item (click)="sidenav.close()" routerLink="/account/courses" class="side-menu-items">
             <mat-icon matListIcon>library_books</mat-icon>
             <span>Mis cursos</span>
+          </a>
+          <a [routerLinkActive]="'side-active'" [routerLinkActiveOptions]="{exact: true}"
+             mat-list-item (click)="sidenav.close()" routerLink="/account/subscriptions" class="side-menu-items">
+            <mat-icon matListIcon>credit_card</mat-icon>
+            <span>Mis subscripciones</span>
+          </a>
+          <a [routerLinkActive]="'side-active'" [routerLinkActiveOptions]="{exact: true}"
+             mat-list-item (click)="sidenav.close()" routerLink="/account/credentials" class="side-menu-items">
+            <mat-icon matListIcon>stars</mat-icon>
+            <span>Credenciales</span>
           </a>
           <a [routerLinkActive]="'side-active'" [routerLinkActiveOptions]="{exact: true}"
              mat-list-item (click)="sidenav.close()" routerLink="/" class="side-menu-items">

@@ -22,6 +22,14 @@ import { PaymentsComponent } from './components/payments/payments.component';
 import { MyCoursesComponent } from './components/my-courses/my-courses.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import { RoutesComponent } from './components/routes/routes.component';
+import { TeachersComponent } from './components/teachers/teachers.component';
+import { EventsComponent } from './components/events/events.component';
+import { PremiumComponent } from './components/premium/premium.component';
+import { BlogsComponent } from './components/blogs/blogs.component';
+import { SubscriptionComponent } from './components/subscription/subscription.component';
+import { CredentialsComponent } from './components/credentials/credentials.component';
+import { SupportComponent } from './components/support/support.component';
 
 
 @NgModule({
@@ -34,7 +42,15 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     ProfileComponent,
     PaymentsComponent,
     MyCoursesComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    RoutesComponent,
+    TeachersComponent,
+    EventsComponent,
+    PremiumComponent,
+    BlogsComponent,
+    SubscriptionComponent,
+    CredentialsComponent,
+    SupportComponent
   ],
     imports: [
         BrowserModule,
@@ -48,10 +64,18 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
                     {path: '', component: ProfileComponent},
                     {path: 'edit-profile', component: EditProfileComponent},
                     {path: 'payment', component: PaymentsComponent},
-                    {path: 'courses', component: MyCoursesComponent}
+                    {path: 'courses', component: MyCoursesComponent},
+                  {path: 'subscriptions', component: SubscriptionComponent},
+                  {path: 'credentials', component: CredentialsComponent},
+                  {path: 'support', component: SupportComponent},
                 ]
             },
-            {path: 'specialization', component: SpecializationsComponent},
+            {path: 'routes', component: RoutesComponent},
+          {path: 'blogs', component: BlogsComponent},
+          {path: 'teachers', component: TeachersComponent},
+          {path: 'events', component: EventsComponent},
+          {path: 'premium', component: PremiumComponent},
+
         ]),
         MatToolbarModule,
         MatIconModule,
