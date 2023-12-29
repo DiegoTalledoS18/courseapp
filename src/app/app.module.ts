@@ -30,6 +30,7 @@ import { BlogsComponent } from './components/blogs/blogs.component';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
 import { CredentialsComponent } from './components/credentials/credentials.component';
 import { SupportComponent } from './components/support/support.component';
+import { CreateBlogComponent } from './components/create-blog/create-blog.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { SupportComponent } from './components/support/support.component';
     BlogsComponent,
     SubscriptionComponent,
     CredentialsComponent,
-    SupportComponent
+    SupportComponent,
+    CreateBlogComponent
   ],
     imports: [
         BrowserModule,
@@ -75,6 +77,7 @@ import { SupportComponent } from './components/support/support.component';
           {path: 'teachers', component: TeachersComponent},
           {path: 'events', component: EventsComponent},
           {path: 'premium', component: PremiumComponent},
+          {path: 'create-blog', component: CreateBlogComponent},
 
         ]),
         MatToolbarModule,
